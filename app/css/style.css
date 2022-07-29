@@ -1,0 +1,29 @@
+body{
+    background-color:  #F5F5F5 !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+.card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-top: 15px;
+    
+}
+.content{
+margin-top: 60px;
+
+}
+
+.main-info h3{
+
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.other-info h3{
+
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    margin-left: 20px;
+}
