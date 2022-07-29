@@ -9,9 +9,13 @@ function info(){
 document.getElementById("OS").innerHTML += `
 ${Osimage(navigator.platform)}
 
-
 `
 
+document.getElementById("main-footer").innerHTML +=`
+<span><b>language:</b> ${navigator.language}</span> 
+<span><b>language:</b> ${}</span> 
+
+`
 
 }
 
