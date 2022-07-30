@@ -73,3 +73,16 @@ display: grid;
 
     overflow-x: scroll;
 }
+
+.plugin-span {
+    background-color: #dedede;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    width: fit-content;
+    
+}
+.plugin-item{
+
+display: grid;
+    }

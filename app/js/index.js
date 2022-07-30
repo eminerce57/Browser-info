@@ -43,10 +43,30 @@ forEach_area.innerHTML +=`
 `
 });
 
-let plugin_area =document.getElementById("plugin-area")
-navigator.PluginArray.forEach(element => {
-    console.log(element)
-});
+let plugin_area = document.getElementById("plugins-area")
+
+const pluginsLength = navigator.plugins.length;
+
+
+for (let i = 0; i < pluginsLength; i++) {
+
+plugin_area.innerHTML +=`
+<div class="plugin-item">
+<span class="plugin-span">${navigator.plugins[i].name}</span>
+<label class="plugin-label">${navigator.plugins[i].description}</label>
+</div>
+
+`
+
+
+
+
+}
+
+
+
+
+
 
 }
 
