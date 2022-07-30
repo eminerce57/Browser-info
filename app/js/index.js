@@ -13,9 +13,40 @@ ${Osimage(navigator.platform)}
 
 document.getElementById("main-footer").innerHTML +=`
 <span><b>language:</b> ${navigator.language}</span> 
-<span><b>language:</b> ${}</span> 
-
+<span><b>vendor:</b> ${navigator.vendor}</span> 
+<span><b>Memory:</b> ${navigator.deviceMemory}GB</span> 
+<span><b>Connection:</b> ${navigator.connection.effectiveType}</span> 
+<span><b>App Code name:</b> ${navigator.appCodeName}</span> 
+<span><b>App name:</b> ${navigator.appName}</span> 
+<span style="text-align:center"><b style="display: flex; justify-content: center;">App version:</b> ${navigator.appVersion}</span> 
 `
+document.getElementById("other-info").innerHTML += `
+<div class="col-6 ">
+<span><b>languages</b> <input class="form-control" type="text" value="${navigator.languages}" disabled ></span>
+
+<span><b>product</b> <input class="form-control" type="text" value="${navigator.product}" disabled ></span> 
+
+<span><b>product sub</b> <input class="form-control" type="text" value="${navigator.productSub}" disabled ></span>  
+
+<span><b>cookie </b> <input class="form-control" type="text" value="${yes_no(navigator.cookieEnabled)}" disabled ></span>  
+</div>
+
+<div class="col-6" id="foreach-area">
+
+</div>
+`
+// ${echFunction()}
+let forEach_area = document.getElementById("foreach-area")
+navigator.userAgentData.brands.forEach((element,index)=> {
+forEach_area.innerHTML +=`
+<span><b>explorer ${index+1}</b> <input class="form-control" type="text" value="${element.brand} version ${element.version}" disabled ></span>  
+`
+});
+
+let plugin_area =document.getElementById("plugin-area")
+navigator.PluginArray.forEach(element => {
+    console.log(element)
+});
 
 }
 
@@ -39,5 +70,27 @@ function Osimage(platform){
     else{
         return "unknown"
     }
+
+}
+
+//  function echFunction(data){
+
+//     data.forEach(element => {
+//      let data =    element.brand
+//      console.log(data)
+//         return data
+    
+//     });
+//  }
+
+function yes_no(bool){
+if(bool== true){
+    return "yes"
+}
+else{
+
+    return "no"
+}
+
 
 }

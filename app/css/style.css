@@ -9,7 +9,7 @@ body{
 }
 .content{
 margin-top: 60px;
-
+margin-bottom: 60px;
 }
 
 .main-info h3{
@@ -54,4 +54,22 @@ margin-top: 60px;
 
 display: grid;
 
+}
+
+#other-info .col-4 span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin-bottom: 10px;
+
+}
+
+#other-info .col-4 span b{
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.plugin-area{
+
+    overflow-x: scroll;
 }
