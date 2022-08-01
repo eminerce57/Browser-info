@@ -14,7 +14,7 @@ ${Osimage(navigator.platform)}
 document.getElementById("main-footer").innerHTML +=`
 <span><b>language:</b> ${navigator.language}</span> 
 <span><b>vendor:</b> ${navigator.vendor}</span> 
-<span><b>Memory:</b> ${navigator.deviceMemory}GB</span> 
+<span><b>least Memory:</b> ${navigator.deviceMemory}GB</span> 
 <span><b>Connection:</b> ${navigator.connection.effectiveType}</span> 
 <span><b>App Code name:</b> ${navigator.appCodeName}</span> 
 <span><b>App name:</b> ${navigator.appName}</span> 
